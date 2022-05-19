@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="The central hub for the webring for members of ETH Zurich. Learn how to add your site today.">
+    <meta name="description" content="The central hub for the webring for members of Amherst College. Learn how to add your site.">
 
     <title>{{ title or meta.title }}</title>
 
-    <link rel="stylesheet" href="{{ meta.url + '/assets/styles/main.css' | url }}">
-    <link type="application/atom+xml" rel="alternate" href="{{ meta.url }}/feeds.xml" title="{{ meta.title }}">
-    <link rel='icon' href='{{ meta.url }}/assets/images/polyring_icon.svg'>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link type="application/atom+xml" rel="alternate" href="feeds.xml" title="{{ meta.title }}">
+    <link rel="icon" href="/assets/images/{{ meta.image }}">
 </head>
 <body>
     <div class="layout">
@@ -25,6 +25,3 @@
     </div>
 </body>
 </html>
-
-
-

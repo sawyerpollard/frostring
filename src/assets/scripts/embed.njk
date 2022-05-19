@@ -1,16 +1,14 @@
 ---
 permalink: 'embed.js'
 ---
-const THEME_FOLDER_URL = "https://polyring.ch/assets/themes/"
+const THEME_FOLDER_URL = '{{ meta.url }}/assets/themes/'
 
 class WebringBanner extends HTMLElement {
-
-    // lookup table for available themes
     themes = {
-      default: THEME_FOLDER_URL + "default.json",
-      dark: THEME_FOLDER_URL + "dark.json",
-      solarized: THEME_FOLDER_URL + "solarized.json",
-      ugly: THEME_FOLDER_URL + "ugly.json"
+      default: THEME_FOLDER_URL + 'default.json',
+      dark: THEME_FOLDER_URL + 'dark.json',
+      solarized: THEME_FOLDER_URL + 'solarized.json',
+      ugly: THEME_FOLDER_URL + 'ugly.json'
     }
 
     constructor() {
@@ -64,6 +62,7 @@ class WebringBanner extends HTMLElement {
             border-radius: 8px;
             box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.12);
             max-width: 480px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
           }
 
           .webring-banner a {
@@ -87,6 +86,10 @@ class WebringBanner extends HTMLElement {
             border-bottom: 1px solid var(--inner-border-color, #DDD);
           }
 
+          .webring-banner__header svg {
+            stroke: var(--text-color, #000001);
+          }
+
           .webring-banner__description {
             flex: 1 0 0%;
             padding-right: 2rem;
@@ -99,16 +102,6 @@ class WebringBanner extends HTMLElement {
             height: 70px;
             margin-right: 1rem;
             border-radius: 50%;
-          }
-
-          .webring-banner_text {
-            line-height:0%;
-            -inkscape-font-specification:'Comfortaa, Normal';
-            text-align:start
-            font-weight="400";
-            font-size="16.933";
-            font-family="Comfortaa";
-            letter-spacing="0" word-spacing="0";
           }
 
           .webring-banner__title {
@@ -170,7 +163,7 @@ class WebringBanner extends HTMLElement {
           ${this.getStyles()}
           <div class="webring-banner">
             <div class="webring-banner__header">
-              {{ "/src/assets/images/polyring_icon.min.svg" | svgContents("webring-banner__image") | safe }}              
+              {{ "/src/assets/images/frostring_icon.svg" | svgContents("webring-banner__image") | safe }}              
               <div class="webring-banner__description">
                 <span>This site is part of</span>
                 <h3 class="webring-banner__title">
